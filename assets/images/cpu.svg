@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="cpu-base" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="ihs-metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="40%" stop-color="#cbd5e1"/>
+      <stop offset="70%" stop-color="#64748b"/>
+      <stop offset="100%" stop-color="#475569"/>
+    </linearGradient>
+    <linearGradient id="pcb-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="gold-pin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Glow & Substrate -->
+  <rect x="25" y="25" width="150" height="150" rx="12" fill="url(#pcb-green)" stroke="#38bdf8" stroke-width="2" />
+  
+  <!-- Corner Gold Alignment Triangle -->
+  <polygon points="32,32 46,32 32,46" fill="url(#gold-pin)" />
+
+  <!-- Outer Substrate Notches -->
+  <rect x="22" y="90" width="6" height="20" rx="2" fill="#0f172a" />
+  <rect x="172" y="90" width="6" height="20" rx="2" fill="#0f172a" />
+
+  <!-- Integrated Heat Spreader (IHS) -->
+  <rect x="42" y="42" width="116" height="116" rx="10" fill="url(#ihs-metal)" stroke="#cbd5e1" stroke-width="1.5"/>
+  <rect x="46" y="46" width="108" height="108" rx="8" fill="#475569" opacity="0.15"/>
+  
+  <!-- Center Heatspreader Emboss -->
+  <rect x="58" y="58" width="84" height="84" rx="6" fill="#334155" opacity="0.6" stroke="#94a3b8" stroke-width="1"/>
+
+  <!-- Tech Markings / Laser Etching -->
+  <text x="100" y="85" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="900" font-size="12" fill="#ffffff" letter-spacing="1">PROCESSOR</text>
+  <text x="100" y="103" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="700" font-size="10" fill="#38bdf8">x86-64 UNLOCKED</text>
+  <text x="100" y="120" text-anchor="middle" font-family="monospace" font-size="8" fill="#94a3b8">SN: 8847-X921-GEN</text>
+
+  <!-- Circuit traces -->
+  <circle cx="38" cy="162" r="3" fill="url(#gold-pin)" />
+  <circle cx="162" cy="162" r="3" fill="url(#gold-pin)" />
+  <circle cx="162" cy="38" r="3" fill="url(#gold-pin)" />
+  <path d="M48 36 H70 M130 36 H152 M48 164 H70 M130 164 H152" stroke="url(#gold-pin)" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

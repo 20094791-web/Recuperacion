@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC BUILDER - Diseña y Arma tu Computadora Personalizada</title>
+    <meta name="description" content="Plataforma moderna y profesional para armar computadoras personalizadas con verificación de compatibilidad en tiempo real y cálculo de consumo de energía.">
+    <!-- Favicon SVG -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/cpu.svg">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+       BARRA DE NAVEGACIÓN SUPERIOR
+       ========================================================================== -->
+    <header class="site-header">
+        <div class="container header-content">
+            <a href="#home" class="brand-link" title="PC BUILDER Inicio">
+                <img src="assets/images/logo.svg" alt="PC BUILDER Logo" class="brand-logo-img">
+            </a>
+
+            <nav class="main-nav" id="main-nav">
+                <a href="#home" class="nav-link active" data-view="home">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    Inicio
+                </a>
+                <a href="#builder" class="nav-link" data-view="builder">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 7h.01"/><path d="M17 7h.01"/><path d="M7 17h.01"/><path d="M17 17h.01"/></svg>
+                    PC Builder
+                </a>
+                <a href="#components" class="nav-link" data-view="components">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                    Componentes
+                </a>
+                <a href="#saved" class="nav-link" data-view="saved">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                    Mis Configuraciones
+                </a>
+                <a href="#about" class="nav-link" data-view="about">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                    Acerca de
+                </a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="header-summary-pill" id="header-summary-btn" title="Ir al Constructor">
+                    <span class="pill-count" id="header-part-count">0/8</span>
+                    <span class="pill-total" id="header-total-price">$0.00</span>
+                </button>
+
+                <button class="mobile-menu-btn" id="mobile-toggle-btn" aria-label="Abrir Menú">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       1. SECCIÓN INICIO (HERO, ESTADÍSTICAS Y PRESETS)
+       ========================================================================== -->
+    <main>
+        <section id="view-home" class="view-section active">
+            <div class="container">
+                <!-- Hero Wrapper -->
+                <div class="hero-wrapper">
+                    <div class="hero-content">
+                        <div class="hero-tag">
+                            <span class="badge badge-blue">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                                Plataforma de Ensamble Next-Gen
+                            </span>
+                        </div>
+                        <h1 class="hero-title">
+                            Diseña tu PC ideal <span class="gradient-text">sin errores ni dudas.</span>
+                        </h1>
+                        <p class="hero-description">
+                            Selecciona procesadores, tarjetas gráficas, memorias y fuentes con validación automática de compatibilidad, cálculo de consumo de energía en tiempo real y presupuesto instantáneo.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#builder" class="btn btn-primary">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                Comenzar a Armar
+                            </a>
+                            <a href="#components" class="btn btn-secondary">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                                Ver Catálogo
+                            </a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <h3>8</h3>
+                                <p>Categorías Esenciales</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>100%</h3>
+                                <p>Validación de Sockets</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>0 ms</h3>
+                                <p>Cálculo Local Instantáneo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <img src="assets/images/hero-pc.svg" alt="PC Gaming Rig Ilustración" class="hero-pc-img">
+                    </div>
+                </div>
+
+                <!-- Características Destacadas -->
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        </div>
+                        <h3>Compatibilidad Inteligente</h3>
+                        <p>El sistema valida sockets de procesador, ranuras de RAM DDR4/DDR5 y dimensiones de gabinete al instante.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        </div>
+                        <h3>Cálculo de Consumo TDP</h3>
+                        <p>Monitorea los Watts necesarios para tu CPU y GPU, recomendándote la potencia adecuada para tu fuente de poder.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/></svg>
+                        </div>
+                        <h3>Guarda tus Configuraciones</h3>
+                        <p>Almacena múltiples presupuestos en tu navegador con localStorage. Cárgalos o expórtalos en cualquier momento.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                        </div>
+                        <h3>100% Ligero y Autónomo</h3>
+                        <p>Sin backend ni registros obligatorios. Funciona directamente en cualquier navegador con máxima velocidad.</p>
+                    </div>
+                </div>
+
+                <!-- Presets / Ensambles Sugeridos -->
+                <div class="presets-section">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            Configuraciones <span>Recomendadas</span>
+                        </h2>
+                        <p class="section-subtitle">
+                            Empieza con un ensamble balanceado probado por expertos y modifícalo según tus gustos y presupuesto.
+                        </p>
+                    </div>
+
+                    <div class="presets-grid" id="presets-container">
+                        <!-- Generado dinámicamente con JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           2. SECCIÓN PC BUILDER (CONSTRUCTOR)
+           ========================================================================== -->
+        <section id="view-builder" class="view-section">
+            <div class="container">
+                <!-- Barra superior de estado del builder -->
+                <div class="builder-header-bar">
+                    <div class="builder-progress-info">
+                        <div>
+                            <span class="progress-counter" id="builder-count-label">0 de 8 componentes</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill" id="builder-progress-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="btn btn-secondary btn-sm" id="btn-clear-build" title="Borrar todos los componentes seleccionados">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+                            Reiniciar Configuración
+                        </button>
+                    </div>
+                </div>
+
+                <div class="builder-layout">
+                    <!-- Columna Izquierda: Ranuras de Componentes -->
+                    <div class="slots-container" id="builder-slots">
+                        <!-- Las 8 tarjetas de ranura se generan vía JS -->
+                    </div>
+
+                    <!-- Columna Derecha: Resumen Fijo -->
+                    <aside class="builder-sidebar">
+                        <div class="summary-card">
+                            <h3 class="summary-title">
+                                Resumen del Ensamble
+                                <span class="badge badge-blue" id="summary-badge-count">0 / 8</span>
+                            </h3>
+
+                            <!-- Indicador de Compatibilidad -->
+                            <div class="compatibility-box status-success" id="builder-comp-box">
+                                <div class="comp-header">
+                                    <span id="comp-icon">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                    </span>
+                                    <span id="comp-status-text">100% Compatible</span>
+                                </div>
+                                <ul class="comp-issues-list" id="comp-issues-list" style="display: none;">
+                                    <!-- Avisos / Incompatibilidades aquí -->
+                                </ul>
+                            </div>
+
+                            <!-- Medidor de Consumo Energético -->
+                            <div class="wattage-meter">
+                                <div class="wattage-header">
+                                    <span>Consumo Estimado:</span>
+                                    <span class="wattage-val" id="summary-wattage-text">~0 Watts</span>
+                                </div>
+                                <div class="wattage-track">
+                                    <div class="wattage-fill" id="summary-wattage-bar"></div>
+                                </div>
+                            </div>
+
+                            <!-- Desglose de Precios -->
+                            <ul class="price-breakdown-list" id="summary-price-list">
+                                <!-- Lista de precios individuales de seleccionados -->
+                            </ul>
+
+                            <!-- Total -->
+                            <div class="total-price-section">
+                                <span class="total-label">Precio Estimado:</span>
+                                <span class="total-amount" id="summary-total-price">$0.00</span>
+                            </div>
+
+                            <!-- Botones de Acción -->
+                            <div class="summary-actions">
+                                <button class="btn btn-primary" id="btn-save-build" style="width: 100%;">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                                    Guardar Configuración
+                                </button>
+                                <button class="btn btn-secondary" id="btn-export-build" style="width: 100%;">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                                    Exportar / Compartir
+                                </button>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           3. SECCIÓN COMPONENTES (CATÁLOGO GENERAL)
+           ========================================================================== -->
+        <section id="view-components" class="view-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Catálogo de <span>Componentes</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        Explora nuestra selección completa de procesadores, gráficas, placas madre y periféricos internos con precios actualizados.
+                    </p>
+                </div>
+
+                <!-- Controles y Filtros -->
+                <div class="catalog-controls">
+                    <!-- Pestañas de categorías -->
+                    <div class="category-tabs-bar" id="catalog-category-tabs">
+                        <button class="category-tab-btn active" data-cat="all">Todos los Componentes</button>
+                        <button class="category-tab-btn" data-cat="cpu">Procesadores</button>
+                        <button class="category-tab-btn" data-cat="motherboard">Placas Madre</button>
+                        <button class="category-tab-btn" data-cat="gpu">Tarjetas Gráficas</button>
+                        <button class="category-tab-btn" data-cat="ram">Memoria RAM</button>
+                        <button class="category-tab-btn" data-cat="storage">Almacenamiento</button>
+                        <button class="category-tab-btn" data-cat="cooler">Refrigeración</button>
+                        <button class="category-tab-btn" data-cat="psu">Fuentes</button>
+                        <button class="category-tab-btn" data-cat="case">Gabinetes</button>
+                    </div>
+
+                    <!-- Buscador y Filtros -->
+                    <div class="search-filters-bar">
+                        <div class="search-input-wrapper">
+                            <svg class="search-icon-inside" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                            <input type="text" id="catalog-search-input" placeholder="Buscar por modelo, marca o especificación (ej. RTX 4070, DDR5, AM5)...">
+                        </div>
+
+                        <select class="filter-select" id="catalog-brand-filter">
+                            <option value="all">Todas las Marcas</option>
+                        </select>
+
+                        <select class="filter-select" id="catalog-sort-select">
+                            <option value="featured">Destacados</option>
+                            <option value="price-asc">Precio: Menor a Mayor</option>
+                            <option value="price-desc">Precio: Mayor a Menor</option>
+                            <option value="name-asc">Nombre: A - Z</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Grilla de Tarjetas -->
+                <div class="components-grid" id="catalog-grid">
+                    <!-- Generado dinámicamente con JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           4. SECCIÓN MIS CONFIGURACIONES (LOCALSTORAGE)
+           ========================================================================== -->
+        <section id="view-saved" class="view-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Mis <span>Configuraciones</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        Tus ensambles guardados localmente. Puedes cargarlos en el constructor, exportarlos o eliminarlos cuando desees.
+                    </p>
+                </div>
+
+                <div class="saved-builds-grid" id="saved-builds-grid">
+                    <!-- Generado dinámicamente vía JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           5. SECCIÓN ACERCA DE (GUÍA, GLOSARIO Y FAQ)
+           ========================================================================== -->
+        <section id="view-about" class="view-section">
+            <div class="container">
+                <div class="about-hero">
+                    <h2>Acerca de <span style="color: var(--accent-cyan);">PC BUILDER</span></h2>
+                    <p style="color: var(--text-secondary); max-width: 800px; font-size: 1.05rem; line-height: 1.7;">
+                        PC BUILDER es una plataforma diseñada para entusiastas, gamers y profesionales que desean configurar y armar su propia computadora personal. Nuestro motor analiza automáticamente reglas de compatibilidad de sockets, tipos de memoria, dimensiones y fuentes de poder para que tomes la mejor decisión de compra.
+                    </p>
+                </div>
+
+                <!-- Guía Paso a Paso de Ensamble -->
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Guía de Ensamble <span>Paso a Paso</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        Si es tu primera vez armando una computadora, sigue este orden recomendado para evitar inconvenientes.
+                    </p>
+                </div>
+
+                <div class="guide-steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">01</div>
+                        <h3>1. Preparar la Placa Madre</h3>
+                        <p>Coloca la placa madre sobre su caja protectora. Instala el procesador con cuidado alineando el triángulo dorado, inserta las memorias RAM en los slots 2 y 4 (canal dual) y monta el disco M.2 NVMe.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">02</div>
+                        <h3>2. Montar en el Gabinete</h3>
+                        <p>Instala el protector I/O trasero y los tornillos elevadores (standoffs). Atornilla la placa madre firmemente pero sin ejercer presión excesiva.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">03</div>
+                        <h3>3. Instalar la Refrigeración</h3>
+                        <p>Monta el disipador o radiador de la refrigeración líquida. Aplica una cantidad adecuada de pasta térmica en el centro del procesador y conecta la bomba o ventilador al puerto CPU_FAN.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">04</div>
+                        <h3>4. Fuente y Cableado</h3>
+                        <p>Inserta la fuente en su compartimento inferior. Conecta el cable ATX principal de 24 pines, el cable EPS de 8 pines para CPU y los cables SATA/ventiladores antes de poner la GPU.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">05</div>
+                        <h3>5. Tarjeta Gráfica y Encendido</h3>
+                        <p>Retira las tapas traseras del gabinete, inserta la GPU en la primera ranura PCIe x16 hasta escuchar el clic, conecta los cables de energía PCIe y conecta el cable HDMI/DisplayPort directamente a la GPU.</p>
+                    </div>
+                </div>
+
+                <!-- Preguntas Frecuentes -->
+                <div class="faq-section">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            Preguntas <span>Frecuentes</span>
+                        </h2>
+                    </div>
+
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>¿Dónde se guardan mis configuraciones?</span>
+                                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="faq-answer">
+                                Todas las configuraciones se almacenan localmente en el almacenamiento seguro de tu navegador (localStorage). No necesitas crear cuentas ni enviar tus datos a ningún servidor externo.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>¿Cómo sé si una memoria RAM es compatible con mi procesador y placa?</span>
+                                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="faq-answer">
+                                Las memorias DDR4 y DDR5 tienen muescas físicas en posiciones diferentes y voltajes distintos. Si seleccionas una placa madre con soporte DDR5, el constructor de PC BUILDER te avisará inmediatamente si intentas agregar memorias DDR4.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>¿Qué potencia de fuente de poder (PSU) necesito?</span>
+                                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="faq-answer">
+                                El consumo general de un equipo depende casi en un 80% de la combinación entre la tarjeta gráfica (GPU) y el procesador (CPU). Nuestro motor calcula la suma de TDP y te sugiere una fuente con al menos 100W a 150W de margen para amortiguar picos transitorios.
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>¿Puedo abrir este sitio sin conexión a internet?</span>
+                                <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                            </button>
+                            <div class="faq-answer">
+                                ¡Sí! Todo el proyecto está construido con HTML5, CSS3 y JavaScript nativo. Los gráficos son vectores SVG locales y los componentes están en archivos JS, por lo que puedes abrir el archivo index.html directamente en cualquier navegador incluso sin conexión.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================================================
+       MODAL DE SELECCIÓN DE COMPONENTES
+       ========================================================================== -->
+    <div class="modal-overlay" id="modal-select-component">
+        <div class="modal-window">
+            <div class="modal-header">
+                <h3 id="modal-select-title">
+                    <img id="modal-select-icon" src="assets/images/cpu.svg" width="26" height="26" alt="">
+                    <span>Seleccionar Componente</span>
+                </h3>
+                <button class="modal-close-btn" id="modal-select-close">&times;</button>
+            </div>
+
+            <div class="modal-controls">
+                <div class="modal-search-row">
+                    <div class="search-input-wrapper">
+                        <svg class="search-icon-inside" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        <input type="text" id="modal-search-input" placeholder="Buscar en esta categoría...">
+                    </div>
+                    <select class="filter-select" id="modal-brand-filter">
+                        <option value="all">Todas las Marcas</option>
+                    </select>
+                    <select class="filter-select" id="modal-sort-select">
+                        <option value="featured">Destacados</option>
+                        <option value="price-asc">Menor Precio</option>
+                        <option value="price-desc">Mayor Precio</option>
+                    </select>
+                </div>
+
+                <label class="modal-toggle-row">
+                    <input type="checkbox" id="modal-compat-only" checked>
+                    <span>Ocultar componentes incompatibles con mi ensamble actual</span>
+                </label>
+            </div>
+
+            <div class="modal-body" id="modal-components-list">
+                <!-- Se llena con JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       MODAL: GUARDAR CONFIGURACIÓN
+       ========================================================================== -->
+    <div class="modal-overlay" id="modal-save-build">
+        <div class="modal-window modal-sm">
+            <div class="modal-header">
+                <h3>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/></svg>
+                    Guardar Configuración
+                </h3>
+                <button class="modal-close-btn" id="modal-save-close">&times;</button>
+            </div>
+            <div style="padding: 24px;">
+                <p style="color: var(--text-secondary); margin-bottom: 14px; font-size: 0.95rem;">
+                    Asigna un nombre a este ensamble para encontrarlo fácilmente en la pestaña "Mis Configuraciones".
+                </p>
+                <div class="search-input-wrapper">
+                    <input type="text" id="save-build-name-input" placeholder="Ej. Mi PC Gamer 2026, Workstation 4K..." maxlength="45">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="modal-save-cancel">Cancelar</button>
+                <button class="btn btn-primary" id="modal-save-confirm">Guardar Ensamble</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       MODAL: EXPORTAR / COMPARTIR
+       ========================================================================== -->
+    <div class="modal-overlay" id="modal-export-build">
+        <div class="modal-window modal-sm">
+            <div class="modal-header">
+                <h3>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                    Exportar Ensamble
+                </h3>
+                <button class="modal-close-btn" id="modal-export-close">&times;</button>
+            </div>
+            <div style="padding: 24px;">
+                <textarea class="export-textarea" id="export-textarea" readonly></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="btn-download-txt">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Descargar .txt
+                </button>
+                <button class="btn btn-primary" id="btn-copy-clipboard">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                    Copiar Texto
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       MODAL: CONFIRMAR ACCIÓN
+       ========================================================================== -->
+    <div class="modal-overlay" id="modal-confirm-action">
+        <div class="modal-window modal-sm">
+            <div class="modal-header">
+                <h3 id="confirm-title">Confirmar</h3>
+                <button class="modal-close-btn" id="modal-confirm-close">&times;</button>
+            </div>
+            <div style="padding: 24px;">
+                <p id="confirm-message" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="modal-confirm-cancel">Cancelar</button>
+                <button class="btn btn-danger" id="modal-confirm-btn">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       CONTENEDOR DE NOTIFICACIONES TOAST
+       ========================================================================== -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- ==========================================================================
+       PIE DE PÁGINA (FOOTER)
+       ========================================================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="assets/images/logo.svg" alt="PC BUILDER" style="height: 38px;">
+                    <p>
+                        Herramienta web profesional para diseñar y simular computadoras personalizadas con análisis de compatibilidad de hardware en tiempo real.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#builder">PC Builder</a></li>
+                        <li><a href="#components">Catálogo</a></li>
+                        <li><a href="#saved">Mis Configuraciones</a></li>
+                        <li><a href="#about">Guía & Acerca de</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Componentes Clave</h4>
+                    <ul>
+                        <li><a href="#components" data-filter-cat="cpu">Procesadores AM5 & LGA1700</a></li>
+                        <li><a href="#components" data-filter-cat="gpu">Gráficas RTX Serie 4000 & RX 7000</a></li>
+                        <li><a href="#components" data-filter-cat="ram">Memorias DDR5 de alta velocidad</a></li>
+                        <li><a href="#components" data-filter-cat="psu">Fuentes ATX 3.0 con 80+ Gold</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 PC BUILDER. Desarrollado con HTML5, CSS3 y JavaScript nativo. Todos los derechos reservados.</p>
+                <p>Precios ficticios en USD únicamente para fines demostrativos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts de la Aplicación -->
+    <script src="js/components.js"></script>
+    <script src="js/builder.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
+

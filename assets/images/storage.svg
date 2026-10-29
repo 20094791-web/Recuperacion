@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="ssd-pcb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="ssd-heat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="ssd-gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+
+  <!-- M.2 PCB Stick (Horizontal) -->
+  <rect x="25" y="70" width="150" height="60" rx="3" fill="url(#ssd-pcb)" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Semi-circular mounting notch on left -->
+  <path d="M25 93 A 7 7 0 0 1 25 107 Z" fill="#0b0f17" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- Gold M-Key connector pins on right -->
+  <rect x="168" y="76" width="7" height="18" fill="url(#ssd-gold)"/>
+  <!-- Key notch -->
+  <rect x="167" y="94" width="8" height="5" fill="#0f172a"/>
+  <rect x="168" y="99" width="7" height="25" fill="url(#ssd-gold)"/>
+
+  <!-- Metal Heat Spreader / Label -->
+  <rect x="38" y="75" width="124" height="50" rx="4" fill="url(#ssd-heat)" stroke="#38bdf8" stroke-width="1.2"/>
+
+  <!-- Graphene / Aluminum fins pattern -->
+  <line x1="42" y1="83" x2="158" y2="83" stroke="#38bdf8" stroke-width="1" opacity="0.6"/>
+  <line x1="42" y1="117" x2="158" y2="117" stroke="#38bdf8" stroke-width="1" opacity="0.6"/>
+
+  <!-- NAND Flash & Controller Chips silhouettes -->
+  <rect x="48" y="87" width="22" height="26" rx="2" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+  <rect x="76" y="87" width="34" height="26" rx="2" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+  <rect x="116" y="87" width="38" height="26" rx="2" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+
+  <!-- Text Branding -->
+  <text x="59" y="103" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="900" font-size="7" fill="#38bdf8">NVMe</text>
+  <text x="93" y="103" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="800" font-size="8" fill="#ffffff">2TB SSD</text>
+  <text x="135" y="103" text-anchor="middle" font-family="monospace" font-size="6.5" fill="#38bdf8">PCIe 4.0</text>
+</svg>

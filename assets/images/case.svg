@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="case-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+    <linearGradient id="glass-tint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(56, 189, 248, 0.12)"/>
+      <stop offset="100%" stop-color="rgba(15, 23, 42, 0.6)"/>
+    </linearGradient>
+    <linearGradient id="case-rgb" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="50%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Case Feet / Pedestals -->
+  <rect x="42" y="174" width="16" height="6" rx="2" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+  <rect x="142" y="174" width="16" height="6" rx="2" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+
+  <!-- Main Chassis Shell -->
+  <rect x="36" y="20" width="128" height="154" rx="8" fill="url(#case-body)" stroke="#38bdf8" stroke-width="2"/>
+
+  <!-- Top Exhaust Ventilation Grid & I/O buttons -->
+  <rect x="42" y="22" width="100" height="6" rx="2" fill="#0f172a"/>
+  <!-- Power button -->
+  <circle cx="152" cy="25" r="2.5" fill="#38bdf8"/>
+  <circle cx="145" cy="25" r="1.5" fill="#94a3b8"/>
+
+  <!-- Left/Front Panel (Front Mesh or Glass) -->
+  <rect x="148" y="32" width="12" height="136" rx="3" fill="#090d16" stroke="#334155" stroke-width="1"/>
+  <!-- Front Fans Glow Rings -->
+  <circle cx="154" cy="55" r="5" fill="none" stroke="#00f0ff" stroke-width="1.5"/>
+  <circle cx="154" cy="95" r="5" fill="none" stroke="#00f0ff" stroke-width="1.5"/>
+  <circle cx="154" cy="135" r="5" fill="none" stroke="#00f0ff" stroke-width="1.5"/>
+
+  <!-- Tempered Glass Side Panel -->
+  <rect x="42" y="32" width="102" height="136" rx="4" fill="url(#glass-tint)" stroke="#64748b" stroke-width="1.2"/>
+
+  <!-- Interior: PSU Shroud / Basement (Bottom) -->
+  <rect x="42" y="138" width="102" height="30" fill="#090d16" stroke="#1e293b" stroke-width="1"/>
+  <text x="93" y="156" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="900" font-size="8" fill="#38bdf8" opacity="0.7">PC BUILDER</text>
+
+  <!-- Interior: Motherboard & CPU Cooler Glow -->
+  <rect x="52" y="44" width="60" height="58" rx="3" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <!-- Cooler AIO Pump -->
+  <circle cx="82" cy="73" r="12" fill="#090d16" stroke="url(#case-rgb)" stroke-width="2"/>
+
+  <!-- Interior: Horizontal GPU Silhouette -->
+  <rect x="50" y="106" width="80" height="20" rx="3" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <line x1="52" y1="116" x2="128" y2="116" stroke="url(#case-rgb)" stroke-width="2"/>
+
+  <!-- Rear Exhaust Fan -->
+  <circle cx="48" cy="60" r="7" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+
+  <!-- Glass Highlight Reflection (Diagonal) -->
+  <polygon points="50,34 95,34 65,166 44,166" fill="rgba(255, 255, 255, 0.05)"/>
+</svg>

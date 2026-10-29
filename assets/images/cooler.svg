@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="rad-metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="pump-rgb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Radiator at the top -->
+  <rect x="25" y="24" width="150" height="42" rx="4" fill="url(#rad-metal)" stroke="#475569" stroke-width="1.5"/>
+  <!-- Radiator Fins Fin-Mesh -->
+  <line x1="30" y1="32" x2="170" y2="32" stroke="#334155" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <line x1="30" y1="45" x2="170" y2="45" stroke="#334155" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <line x1="30" y1="58" x2="170" y2="58" stroke="#334155" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <!-- Radiator Fans (2 Fans side by side) -->
+  <circle cx="65" cy="45" r="16" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+  <circle cx="65" cy="45" r="5" fill="#38bdf8"/>
+  <circle cx="135" cy="45" r="16" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+  <circle cx="135" cy="45" r="5" fill="#38bdf8"/>
+
+  <!-- Braided Sleeved Tubes -->
+  <path d="M150 66 C 150 95, 125 110, 115 130" stroke="#0f172a" stroke-width="9" stroke-linecap="round"/>
+  <path d="M150 66 C 150 95, 125 110, 115 130" stroke="#334155" stroke-width="7" stroke-linecap="round"/>
+  <path d="M150 66 C 150 95, 125 110, 115 130" stroke="#64748b" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 3"/>
+
+  <path d="M162 66 C 162 105, 138 120, 125 142" stroke="#0f172a" stroke-width="9" stroke-linecap="round"/>
+  <path d="M162 66 C 162 105, 138 120, 125 142" stroke="#334155" stroke-width="7" stroke-linecap="round"/>
+  <path d="M162 66 C 162 105, 138 120, 125 142" stroke="#64748b" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 3"/>
+
+  <!-- CPU Pump Block (Bottom Left) -->
+  <circle cx="78" cy="142" r="32" fill="#0f172a" stroke="#38bdf8" stroke-width="2.5"/>
+  <circle cx="78" cy="142" r="26" fill="#1e293b" stroke="#00f0ff" stroke-width="1.5"/>
+  <!-- Infinity Mirror Ring -->
+  <circle cx="78" cy="142" r="18" fill="#090d16" stroke="url(#pump-rgb)" stroke-width="2"/>
+  <circle cx="78" cy="142" r="10" fill="#0284c7" opacity="0.6"/>
+  <!-- Center Temp Display or Emblem -->
+  <text x="78" y="146" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="900" font-size="11" fill="#ffffff">32°</text>
+
+  <!-- Mounting Brackets on Pump -->
+  <rect x="42" y="140" width="8" height="4" rx="1.5" fill="#94a3b8"/>
+  <rect x="106" y="140" width="8" height="4" rx="1.5" fill="#94a3b8"/>
+  <rect x="76" y="106" width="4" height="8" rx="1.5" fill="#94a3b8"/>
+  <rect x="76" y="170" width="4" height="8" rx="1.5" fill="#94a3b8"/>
+</svg>

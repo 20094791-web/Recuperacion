@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="psu-metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="gold-badge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Main PSU Box (Isometric/Perspective view front & side) -->
+  <rect x="25" y="40" width="150" height="120" rx="6" fill="url(#psu-metal)" stroke="#38bdf8" stroke-width="1.8"/>
+
+  <!-- Left Side: Large 120mm Intake Fan Grill -->
+  <circle cx="80" cy="100" r="42" fill="#090d16" stroke="#475569" stroke-width="2"/>
+  <circle cx="80" cy="100" r="32" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <circle cx="80" cy="100" r="20" fill="none" stroke="#334155" stroke-width="1.5"/>
+  <circle cx="80" cy="100" r="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  
+  <!-- Fan Grill Crossbars -->
+  <line x1="80" y1="58" x2="80" y2="142" stroke="#475569" stroke-width="1.5"/>
+  <line x1="38" y1="100" x2="122" y2="100" stroke="#475569" stroke-width="1.5"/>
+  <line x1="50" y1="70" x2="110" y2="130" stroke="#475569" stroke-width="1.5"/>
+  <line x1="50" y1="130" x2="110" y2="70" stroke="#475569" stroke-width="1.5"/>
+
+  <!-- Right Side: Modular Cable Socket Interface -->
+  <rect x="135" y="55" width="32" height="90" rx="4" fill="#090d16" stroke="#334155" stroke-width="1"/>
+  <!-- Motherboard 24-pin socket -->
+  <rect x="140" y="62" width="22" height="14" rx="1.5" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+  <!-- CPU / PCIe 8-pin sockets -->
+  <rect x="140" y="82" width="22" height="10" rx="1.5" fill="#1e293b" stroke="#64748b" stroke-width="1"/>
+  <rect x="140" y="96" width="22" height="10" rx="1.5" fill="#1e293b" stroke="#64748b" stroke-width="1"/>
+  <!-- Peripheral / SATA sockets -->
+  <rect x="140" y="110" width="22" height="8" rx="1.5" fill="#1e293b" stroke="#64748b" stroke-width="1"/>
+  <rect x="140" y="122" width="22" height="8" rx="1.5" fill="#1e293b" stroke="#64748b" stroke-width="1"/>
+
+  <!-- 80 Plus Gold Badge (Bottom Left) -->
+  <rect x="34" y="132" width="24" height="20" rx="3" fill="url(#gold-badge)"/>
+  <text x="46" y="142" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="900" font-size="6" fill="#0f172a">80+</text>
+  <text x="46" y="149" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="700" font-size="5" fill="#0f172a">GOLD</text>
+
+  <!-- Wattage Spec Top Left -->
+  <text x="35" y="56" font-family="'Inter', sans-serif" font-weight="900" font-size="11" fill="#38bdf8">850W</text>
+</svg>

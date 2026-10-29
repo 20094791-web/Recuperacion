@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="ram-heatsink" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="60%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="ram-rgb" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="35%" stop-color="#3b82f6"/>
+      <stop offset="70%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="ram-pins" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Module 1 (Slightly behind) -->
+  <g opacity="0.5" transform="translate(10, -15)">
+    <rect x="25" y="75" width="150" height="58" rx="4" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+    <path d="M25 75 C 60 70, 140 70, 175 75 L175 80 L25 80 Z" fill="url(#ram-rgb)"/>
+  </g>
+
+  <!-- Module 2 (Front) -->
+  <!-- Top RGB Lightbar diffuser -->
+  <path d="M22 80 C 40 73, 160 73, 178 80 L176 89 L24 89 Z" fill="url(#ram-rgb)" stroke="#ffffff" stroke-width="0.5"/>
+  <rect x="25" y="87" width="150" height="4" fill="#ffffff" opacity="0.6"/>
+
+  <!-- Main Aluminum Heatsink Body -->
+  <path d="M22 88 L178 88 L176 138 L24 138 Z" fill="url(#ram-heatsink)" stroke="#38bdf8" stroke-width="1.5"/>
+
+  <!-- Angular Heatsink Cuts & Fins -->
+  <polygon points="40,96 75,96 85,124 50,124" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+  <polygon points="90,96 125,96 135,124 100,124" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+
+  <!-- Logo and Spec Branding -->
+  <text x="145" y="112" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="900" font-size="12" fill="#38bdf8">DDR5</text>
+  <text x="145" y="125" text-anchor="middle" font-family="monospace" font-size="7" fill="#94a3b8">6000MHz CL30</text>
+
+  <!-- PCB Green/Black Substrate Underneath -->
+  <rect x="25" y="138" width="150" height="16" fill="#090d16" stroke="#334155" stroke-width="1"/>
+
+  <!-- Gold Contact Pins -->
+  <rect x="28" y="146" width="65" height="7" fill="url(#ram-pins)"/>
+  <!-- Key Notch (Center) -->
+  <rect x="93" y="144" width="8" height="10" fill="#090d16"/>
+  <rect x="101" y="146" width="70" height="7" fill="url(#ram-pins)"/>
+
+  <!-- Subtle Pin division lines -->
+  <line x1="45" y1="146" x2="45" y2="153" stroke="#78350f" stroke-width="0.8"/>
+  <line x1="65" y1="146" x2="65" y2="153" stroke="#78350f" stroke-width="0.8"/>
+  <line x1="120" y1="146" x2="120" y2="153" stroke="#78350f" stroke-width="0.8"/>
+  <line x1="145" y1="146" x2="145" y2="153" stroke="#78350f" stroke-width="0.8"/>
+</svg>
